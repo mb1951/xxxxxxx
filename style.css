@@ -1,0 +1,176 @@
+body {
+    font-family: sans-serif;
+    background-color: white;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+}
+
+nav a:hover {
+    background-color: #F2F2F2;
+    border-radius: 3px;
+    
+}
+
+nav {
+    
+    display: flex;
+    justify-content: left;
+}
+
+.link {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 10px;
+    display: flex;
+    
+    float: right;
+}
+
+.link:hover {
+    background-color: #151515;
+}
+
+.slider {
+  position: relative;
+  width: 482px; <- меняем  в зависимости от ширины фотки
+  margin: 50px auto;
+}
+
+
+.slider input[name="switch"] {
+  display: none;
+}
+
+
+.switch {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  text-align: center;
+  width: 100%;
+}
+
+
+.switch label {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  margin: 0 3px;
+  border-radius: 50%;
+  background-color: #738290;
+}
+
+
+.slider-inner {
+  overflow: hidden;
+}
+
+
+.slides {
+  width: 400%; <- это значение должно меняться в зависимости от количества фотографий в слайдере
+  transition: all 0.5s;
+}
+
+
+.slides img {
+  width: 482px; <- меняем  в зависимости от ширины фотки
+  float: left;
+}
+
+
+#btn1:checked~slider-inner .slides {
+  transform: translate(0);
+}
+
+
+#btn2:checked~.slider-inner .slides {
+  transform: translate(-482px);
+}
+
+
+#btn3:checked~.slider-inner .slides {
+  transform: translate(-964px);
+}
+
+
+#btn4:checked~.slider-inner .slides {
+  transform: translate(-1446px); <- значение меняется в зависимости от ширины фотграфии; если нужны еще кнопки, то просто копируешь и меняешь цифру на #btn5, #btn6 и тд…
+}
+#btn1:checked~.switch label[for="btn1"] {
+  background-color: white; <- тут точно также, просто копируешь и меняешь цифру
+}
+
+
+#btn2:checked~.switch label[for="btn2"] {
+  background-color: white;
+}
+
+
+#btn3:checked~.switch label[for="btn3"] {
+  background-color: white;
+}
+
+
+#btn4:checked~.switch label[for="btn4"] {
+  background-color: white;
+}
+
+
+
+.fotoo .foto {
+    margin-top: 30px;
+   margin-right: 70px;
+   width: 600px;
+   right: 200%; 
+   
+}
+
+article .fotoo{
+  display: inline-block;
+  position: absolute;
+}
+
+.fotoo h1{
+  width: 400px;
+  position: absolute;
+  top: 40px;
+  left: 60%;
+}
+
+.fotoo .one{
+  width: 550px;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 35px;
+}
+
+p {
+  width: 550px;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  font-size: 55px;
+  text-align: center;
+}
+
+ul {
+  font-size: 25px;
+}
